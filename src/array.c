@@ -5,7 +5,7 @@ int k;
 int A[100000];
 
 int p(int m){
-	return (long long int) A[m] >= k;
+	return A[m] >= k;
 }
 
 int main(){
@@ -14,7 +14,7 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = 0;
+  lb = -1;
   ub = n;
   while(ub - lb > 1){
 	int m = (lb + ub) / 2;

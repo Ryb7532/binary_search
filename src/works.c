@@ -14,7 +14,7 @@ int p(int m){
         }
         else {
             if(A[i] > m){
-                cnt = k + 1;
+                return 0;
             }
             else {
             sum = A[i];
@@ -22,7 +22,7 @@ int p(int m){
             }
         }
     }
-    return (long long int) cnt <= k;
+    return cnt <= k;
 }
 
 int main(){
@@ -31,7 +31,7 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-    lb = 1;
+    lb = 0;
     ub = 1000000000;
     while(ub - lb > 1){
         int m = (lb + ub) / 2;

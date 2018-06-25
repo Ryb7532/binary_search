@@ -6,11 +6,11 @@ int A[100000];
 
 int p(int m){
     int i;
-    int sum = 0;
+    long long int sum = 0;
     for(i = 0; i < n; i++){
         sum = sum + (A[i] - 1) / m + 1;
     }
-    return (long long int) sum <= k;
+    return sum <= k;
 }
 
 int main(){

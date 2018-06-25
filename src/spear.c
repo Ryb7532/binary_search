@@ -6,11 +6,11 @@ int A[100000];
 
 int p(int m){
     int i;
-    int sum = 0;
+    long long int sum = 0;
     for(i = 0; i < n; i++){
         sum = sum + (A[i] / m);
     }
-    return (long long int) sum < k;
+    return sum < k;
 }
 
 int main(){
@@ -20,7 +20,7 @@ int main(){
     scanf("%d", &A[i]);
   }
     lb = 0;
-    ub = 1000000000;
+    ub = 1000000001;
     while(ub - lb > 1){
         int m = (lb + ub) / 2;
         if(p(m)){
